@@ -1,0 +1,47 @@
+Arguments: 
+  D:\Program Files\nodejs\node.exe D:\Program Files (x86)\Yarn\bin\yarn.js add webpack webpacl-cli --dev
+
+PATH: 
+  D:\Program Files\Git\mingw64\bin;D:\Program Files\Git\usr\bin;C:\Users\Administrator\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;D:\Program Files\Git\cmd;C:\Program Files\TortoiseSVN\bin;D:\Program Files (x86)\Yarn\bin;D:\Program Files\PuTTY;D:\Users\Administrator\AppData\Roaming\nvm;D:\Program Files\nodejs;D:\Program Files\Dart\dart-sdk\bin;C:\Users\Administrator\AppData\Local\Android\Sdk\platform-tools;D:\Users\Administrator\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Administrator\AppData\Roaming\npm;C:\Users\Administrator\AppData\Local\Yarn\bin;D:\Users\Administrator\AppData\Roaming\nvm;D:\Program Files\nodejs;D:\Program Files\flutter\bin;C:\Users\Administrator\go\bin;C:\Users\Administrator\AppData\Local\BypassRuntm;D:\Users\Administrator\AppData\Local\Programs\Fiddler;D:\Program Files\JetBrains\WebStorm 2019.3.3\bin
+
+Yarn version: 
+  1.15.2
+
+Node version: 
+  10.15.3
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.npm.taobao.org/webpacl-cli: Not found
+      at Request.params.callback [as _callback] (D:\Program Files (x86)\Yarn\lib\cli.js:65167:18)
+      at Request.self.callback (D:\Program Files (x86)\Yarn\lib\cli.js:129541:22)
+      at Request.emit (events.js:189:13)
+      at Request.<anonymous> (D:\Program Files (x86)\Yarn\lib\cli.js:130513:10)
+      at Request.emit (events.js:189:13)
+      at IncomingMessage.<anonymous> (D:\Program Files (x86)\Yarn\lib\cli.js:130435:12)
+      at Object.onceWrapper (events.js:277:13)
+      at IncomingMessage.emit (events.js:194:15)
+      at endReadableNT (_stream_readable.js:1125:12)
+      at process._tickCallback (internal/process/next_tick.js:63:19)
+
+npm manifest: 
+  {
+    "name": "music-player",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
