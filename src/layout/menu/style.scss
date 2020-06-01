@@ -1,0 +1,27 @@
+.menu{
+  width: 250px;
+  box-sizing: border-box;
+  padding:50px 20px;
+  background-color: #E8E8E8;
+  .title{
+    color: #43637D;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .list{
+    margin-top: 40px;
+    .title{
+      color: #9C9C9C;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    li{
+      box-sizing: border-box;
+      padding-left: 10px;
+      color: #626771;
+      margin-top: 20px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+}

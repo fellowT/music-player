@@ -1,10 +1,12 @@
-import React, { useState } from 'react'
-import styles from './app.scss'
-const App = () => {
-  let [count, setCount] = useState<number>(1)
-  return (
-    <div className={styles.wrap} onClick={()=>setCount(count++)}>{count}</div>
-  )
-}
+import React from 'react';
+import { HashRouter } from 'react-router-dom';
+import Layout from './layout';
+import './assets/styles/index.scss';
 
-export default App
+const App = () => (
+  <HashRouter>
+    <Layout />
+  </HashRouter>
+);
+
+export default App;
