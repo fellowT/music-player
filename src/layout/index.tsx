@@ -4,21 +4,28 @@ import LayoutMenu from './menu';
 import LayoutHeader from './header';
 import LayoutFooter from './footer';
 import style from './style.scss';
-import routes from '../routes';
+import { RoutesType } from '../routes';
 
-const Layout = () => (
-  <div className={style.wrap}>
-    <div className={style.container}>
-      <LayoutMenu />
-      <div className={style.main}>
-        <LayoutHeader />
-        <div className={style.content}>
-          { renderRoutes(routes) }
+
+interface PropsType {
+  route: RoutesType
+}
+const Layout = (props: PropsType) => {
+  const { route } = props;
+  return (
+    <div className={style.wrap}>
+      <div className={style.container}>
+        <LayoutMenu />
+        <div className={style.main}>
+          <LayoutHeader />
+          <div className={style.content}>
+            {renderRoutes(route.childrens)}
+          </div>
         </div>
       </div>
+      <LayoutFooter>1111</LayoutFooter>
     </div>
-    <LayoutFooter>1111</LayoutFooter>
-  </div>
-);
+  );
+};
 
 export default Layout;

@@ -3,6 +3,7 @@
   box-sizing: border-box;
   padding:50px 20px;
   background-color: #E8E8E8;
+  user-select: none;
   .title{
     color: #43637D;
     font-weight: bold;
@@ -10,18 +11,28 @@
   }
   .list{
     margin-top: 40px;
+    display: flex;
+    flex-direction: column;
     .title{
       color: #9C9C9C;
       font-weight: bold;
       font-size: 18px;
     }
-    li{
+    a{
       box-sizing: border-box;
+      display: inline-flex;
       padding-left: 10px;
+      align-items: center;
       color: #626771;
       margin-top: 20px;
       font-weight: bold;
       cursor: pointer;
+      &.selected{
+        color: red;
+      }
+      span{
+        margin-left: 5px;
+      }
     }
   }
 }

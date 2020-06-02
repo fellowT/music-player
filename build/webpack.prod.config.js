@@ -12,8 +12,7 @@ module.exports = {
   module:{
     rules:[
       {
-        test:/\.(scss|sass)$/,
-        exclude: /node_modules/,
+        test:/\.(sa|sc|c)ss$/,
         use:[
           {
             loader:MiniCssExtractPlugin.loader
@@ -28,6 +27,15 @@ module.exports = {
             loader:'sass-loader',
             options:{
               implementation: require('dart-sass'),
+            }
+          },
+          {
+            loader: 'sass-resources-loader',
+            options: {
+              resources: [
+                // resolve方法第二个参数为scss配置文件地址，如果有多个，就进行依次添加即可
+                resolve('../src/assets/styles/mixin.scss'),
+              ],
             }
           },
           'postcss-loader'

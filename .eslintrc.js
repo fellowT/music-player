@@ -33,6 +33,10 @@ module.exports = {
     'jsx-a11y/interactive-supports-focus': 'off',
     'jsx-a11y/click-events-have-key-events': 'off',
     'max-classes-per-file': 'off',
+    'import/prefer-default-export': 'off',
+    'consistent-return': 'off',
+    'no-param-reassign': 'off',
+    'no-console': 'off',
     'import/extensions': [
       'error',
       'ignorePackages',

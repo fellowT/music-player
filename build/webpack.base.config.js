@@ -28,7 +28,16 @@ module.exports = {
         }
       },
       {
+        test: /\.svg$/,
+        loader: 'svg-sprite-loader',
+        include: resolve('../src/assets/icons'),// 只带自己人玩
+        options:{
+          symbolId: 'icon-[name]'
+        }
+      },
+      {
         test:/\.(png|jpe?g|gif|svg)(\?.*)?/,
+        exclude: resolve('../src/assets/icons'), // 不带icon 玩
         use:{
           loader:'url-loader',
           options:{
