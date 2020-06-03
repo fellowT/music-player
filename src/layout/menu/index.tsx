@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import style from './style.scss';
+import style from './style.module.scss';
 import Icon from '../../components/icon';
 
 const Menu = () => {

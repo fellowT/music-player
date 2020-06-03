@@ -1,7 +1,10 @@
 import produce from 'immer';
 import * as actionTypes from './constants';
 
-const defaultState = {
+export interface DiscoverStoreState{
+  bannerList:any[]
+}
+const defaultState:DiscoverStoreState = {
   bannerList: [],
 };
 export default produce((state = defaultState, action):void => {

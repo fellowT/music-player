@@ -3,7 +3,7 @@ import { renderRoutes } from 'react-router-config';
 import LayoutMenu from './menu';
 import LayoutHeader from './header';
 import LayoutFooter from './footer';
-import style from './style.scss';
+import styles from './style.module.scss';
 import { RoutesType } from '../routes';
 
 
@@ -13,12 +13,12 @@ interface PropsType {
 const Layout = (props: PropsType) => {
   const { route } = props;
   return (
-    <div className={style.wrap}>
-      <div className={style.container}>
+    <div className={styles.wrap}>
+      <div className={styles.container}>
         <LayoutMenu />
-        <div className={style.main}>
+        <div className={styles.main}>
           <LayoutHeader />
-          <div className={style.content}>
+          <div className={styles.content}>
             {renderRoutes(route.childrens)}
           </div>
         </div>

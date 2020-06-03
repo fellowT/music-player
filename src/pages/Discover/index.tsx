@@ -1,30 +1,51 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
+import { Dispatch } from 'redux';
 import Slider from '../../components/slider';
 import * as actionTypes from './store/actionCreators';
-import style from './style.scss';
+import styles from './style.module.scss';
+import { IStoreState } from '../../store/type';
 
-const Discover = (props) => {
+interface PropsType {
+  bannerList:any[];
+  getBannerDataDispatch():void
+}
+const Discover = (props:PropsType) => {
   const { bannerList } = props;
   const { getBannerDataDispatch } = props;
   useEffect(() => {
     getBannerDataDispatch();
   }, []);
   return (
-    <div className={style.wrap}>
+    <div className={styles.wrap}>
       <Slider bannerList={bannerList} />
-
+      <div className={styles.content}>
+        <div className={styles.recommended}>
+          <p className={styles.title}>推荐歌单</p>
+          <ul>
+            <li />
+            <li />
+            <li />
+            <li />
+            <li />
+            <li />
+            <li />
+            <li />
+            <li />
+          </ul>
+        </div>
+        <div className={styles.hot}>
+          <p className={styles.title}>最新音乐</p>
+        </div>
+      </div>
     </div>
   );
 };
-// 映射 Redux 全局的 state 到组件的 props 上
-const mapStateToProps = (state) => ({
-  // 不要在这里将数据 toJS
-  // 不然每次 diff 比对 props 的时候都是不一样的引用，还是导致不必要的重渲染，属于滥用 immutable
+const mapStateToProps = (state:IStoreState) => ({
   bannerList: state.discover.bannerList,
 });
 // 映射 dispatch 到 props 上
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = (dispatch:Dispatch) => ({
   getBannerDataDispatch() {
     dispatch(actionTypes.getBannerList());
   },

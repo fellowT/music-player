@@ -1,39 +1,38 @@
 import React, { useState, useEffect } from 'react';
 import Swiper from 'swiper';
 import 'swiper/css/swiper.css';
-import styles from './style.scss';
+import './index.scss';
+import styles from './style.module.scss';
 
-const Slider = (props) => {
-  const [sliderSwiper, setSliderSwiper] = useState(null);
+interface PropsType {
+  bannerList:any[]
+}
+const Slider = (props:PropsType) => {
+  const [sliderSwiper, setSliderSwiper] = useState<Swiper | null>(null);
   const { bannerList } = props;
 
   useEffect(() => {
     if (bannerList.length && !sliderSwiper) {
-      console.log(123);
-
-      let sliderSwiper = new Swiper('.slider-container', {
+      let swiper = new Swiper('.swiper-container', {
+        slidesPerView: 3,
+        spaceBetween: 30,
         loop: true,
+        centeredSlides: true,
         observer: true, // 修改swiper自己或子元素时，自动初始化swiper
         observeParents: true, // 修改swiper的父元素时，自动初始化swiper
-        autoplay: {
-          delay: 3000,
-          disableOnInteraction: false,
-        },
         pagination: { el: '.swiper-pagination' },
       });
-      console.log(sliderSwiper);
-
-      setSliderSwiper(sliderSwiper);
+      setSliderSwiper(swiper);
     }
   }, [bannerList.length, sliderSwiper]);
 
   return (
     <div className={styles.wrap}>
-      <div className={`slider-container ${styles.container}`}>
+      <div className={`swiper-container ${styles.container}`}>
         <div className="swiper-wrapper">
           {
-            bannerList.map((slider, index) => (
-              <div className={styles['swiper-slide']} key={index}>
+            bannerList.map((slider) => (
+              <div className="swiper-slide" key={slider.imageUrl}>
                 <div className={styles['slider-nav']}>
                   <img src={slider.imageUrl} width="100%" height="100%" alt="推荐" />
                 </div>

@@ -1,0 +1,59 @@
+.header{
+  height: 80px;
+  border-bottom: 1px solid #F8F8F8;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 3px 4px -4px rgba($color: #000000, $alpha: .2);
+  .left{
+    display: flex;
+    align-items: center;
+    .search{
+      width: 250px;
+      height: 39px;
+      border: 1px solid #ededed;
+      background-color: #fafcfb;
+      box-sizing: border-box;
+      padding: 0 25px 0 5px;
+      border-radius: 5px;
+      position: relative;
+      input{
+        border: none;
+        height: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        background-color: #fafcfb;
+      }
+      .searchIcon{
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        right: 10px;
+        cursor: pointer;
+      }
+    }
+    .leftIcon{
+      cursor: pointer;
+    }
+    .rightIcon{
+      transform: rotate(180deg);
+      margin-left: 80px;
+      margin-right: 100px;
+      cursor: pointer;
+    }
+    .refreshIcon{
+      margin-right: 100px;
+      cursor: pointer;
+    }
+  }
+  .right{
+    .name{
+      font-weight: bolder;
+      color: #000000;
+    }
+  }
+}
