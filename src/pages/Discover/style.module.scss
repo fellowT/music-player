@@ -1,5 +1,5 @@
 .wrap{
-  padding: 20px 50px;
+  padding: 20px 100px;
   .content{
     display: flex;
     margin-top: 50px;
@@ -8,10 +8,57 @@
       font-weight: bold;
     }
     .recommended{
-      width: 70%;
+      width: 75%;
+      .list{
+        width: 100%;
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        li{
+          width: 190px;
+          margin-right: 20px;
+          margin-bottom: 50px;
+          img{
+            width: 100%;
+            border-radius: 5px;
+          }
+          .name{
+            @include ell()
+          }
+        }
+      }
     }
-    .hot{
+    .newsong{
+      flex: 1;
+      margin-left: 50px;
+      user-select: none;
       width: 30%;
+      .list{
+        width: 100%;
+        margin-top: 20px;
+        .item{
+          margin-bottom: 50px;
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+          .img{
+            width: 80px;
+            height: 80px;
+            border-radius: 5px;
+          }
+          .info{
+            width: 100px;
+            margin-left: 20px;
+          }
+          .play{
+            margin-left: 30px;
+            margin-right: 30px;
+            color: #3882ff;
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
     }
 
   }
