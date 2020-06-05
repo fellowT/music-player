@@ -6,7 +6,7 @@ import * as actionTypes from './store/actionCreators';
 import styles from './style.module.scss';
 import { IStoreState } from '../../store/type';
 import Icon from '../../components/icon';
-import { transformDuration } from '../../utils';
+import { transformDuration, transformPlayCount } from '../../utils';
 
 interface PropsType {
   bannerList:any[];
@@ -34,7 +34,16 @@ const Discover = (props:PropsType) => {
           <ul className={styles.list}>
             {playList.map((item) => (
               <li key={item.id}>
-                <img className={styles.img} src={item.picUrl} alt="" />
+                <div className={styles.img}>
+                  <img src={item.picUrl} alt="" />
+                  <div className={styles.mask}>
+                    <div>
+                      <Icon iconClass="headset" />
+                      {transformPlayCount(item.playCount)}
+                    </div>
+                    <Icon iconClass="mini-play" size="20px" />
+                  </div>
+                </div>
                 <p className={styles.name}>{item.name}</p>
               </li>
             ))}
@@ -49,12 +58,12 @@ const Discover = (props:PropsType) => {
                 <li key={item.id} className={styles.item} onMouseLeave={() => setHoverMusic(0)} onMouseMove={() => setHoverMusic(item.id)}>
                   <img className={styles.img} src={item.picUrl} alt="" />
                   <div className={styles.info}>
-                    <p>{item.name}</p>
-                    <span>{item.song.artists[0].name}</span>
+                    <p className={styles.songname}>{item.name}</p>
+                    <span className={styles.singer}>{item.song.artists[0].name}</span>
                   </div>
                   {
                     hoverMusic === item.id
-                      ? <Icon className={styles.play} size="20px" iconClass="play" />
+                      ? <Icon className={styles.play} size="20px" iconClass="mini-play" />
                       : <div className={styles.play} />
 
                   }

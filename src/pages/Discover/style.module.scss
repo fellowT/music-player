@@ -18,9 +18,29 @@
           width: 190px;
           margin-right: 20px;
           margin-bottom: 50px;
-          img{
+          .img{
             width: 100%;
-            border-radius: 5px;
+            height: 190px;
+            position: relative;
+            cursor: pointer;
+            img{
+              width: 100%;
+              border-radius: 5px;
+            }
+            .mask{
+              width: 100%;
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              height: 30px;
+              color: #ffffff;
+              display: flex;
+              align-items: center;
+              padding: 0 5px;
+              box-sizing: border-box;
+              justify-content: space-between;
+              background-color: rgba($color: #000000, $alpha: .3);
+            }
           }
           .name{
             @include ell()
@@ -49,6 +69,13 @@
           .info{
             width: 100px;
             margin-left: 20px;
+            .songname{
+              color: #6c6c6c;
+              font-weight: bold;
+            }
+            .singer{
+              color: #b2b2b2;
+            }
           }
           .play{
             margin-left: 30px;

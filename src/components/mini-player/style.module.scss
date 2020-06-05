@@ -1,0 +1,51 @@
+.player{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  .btns{
+    width: 250px;
+    box-sizing: border-box;
+    padding: 0 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .playBtn{
+      width: 35px;
+      height: 35px;
+      @include center();
+      background-color: #f6f6f6;
+      border: 1px solid #c5c5c5;
+      border-radius: 50%;
+      .playIcon{
+        transform: translateX(2px);
+      }
+    }
+  }
+  .play{
+    flex: 1;
+    display: flex;
+    padding: 0 50px;
+    img{
+      display: inline-block;
+      height: 50px;
+      width: 50px;
+      background-color: red;
+    }
+    .playInfo{
+      margin-left: 20px;
+      .songname{
+        color: 666666;
+        font-weight: bold;
+        font-size: 18px;
+      }
+      .singer{
+        color: #9f9f9f;
+        margin-left: 20px;
+      }
+    }
+  }
+  .ctrl{
+    width: 500px;
+  }
+}

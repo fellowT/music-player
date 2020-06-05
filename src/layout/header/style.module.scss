@@ -51,9 +51,13 @@
     }
   }
   .right{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
     .name{
       font-weight: bolder;
       color: #000000;
+      margin-right: 10px;
     }
   }
 }

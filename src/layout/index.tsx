@@ -5,6 +5,7 @@ import LayoutHeader from './header';
 import LayoutFooter from './footer';
 import styles from './style.module.scss';
 import { RoutesType } from '../routes';
+import MiniPlayer from '../components/mini-player';
 
 
 interface PropsType {
@@ -23,7 +24,7 @@ const Layout = (props: PropsType) => {
           </div>
         </div>
       </div>
-      <LayoutFooter>1111</LayoutFooter>
+      <LayoutFooter><MiniPlayer /></LayoutFooter>
     </div>
   );
 };

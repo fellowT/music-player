@@ -17,7 +17,8 @@ const Header = () => {
         </div>
       </div>
       <div className={styles.right}>
-        <span className={styles.name}>蜡笔小新</span>
+        <span className={styles.name}>登录</span>
+        <Icon iconClass="logout" size="30px" />
       </div>
     </div>
 
