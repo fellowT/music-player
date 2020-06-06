@@ -26,10 +26,11 @@
     flex: 1;
     display: flex;
     padding: 0 50px;
+    align-items: center;
     img{
       display: inline-block;
-      height: 50px;
-      width: 50px;
+      height: 60px;
+      width: 60px;
       background-color: red;
     }
     .playInfo{

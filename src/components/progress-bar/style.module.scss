@@ -1,0 +1,33 @@
+.wrap{
+  height: 30px;
+  width: 1000px;
+  .barInner{
+    height: 6px;
+    position: relative;
+    top: 12px;
+    background-color: #d4d4d2;
+    .progress {
+      position: absolute;
+      height: 100%;
+      background: #3882ff;
+    }
+    .btnWrapper{
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      left: -15px;
+      top: -12px;
+      .progressBtn{
+        position: relative;
+        top: 8px;
+        left: 8px;
+        box-sizing: border-box;
+        width: 14px;
+        height: 14px;
+        border: 3px solid #3882ff;
+        border-radius: 50%;
+        background:#3882ff;
+      }
+    }
+  }
+}

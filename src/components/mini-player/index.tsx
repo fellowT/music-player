@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styles from './style.module.scss';
 import Icon from '../icon';
+import PargressBar from '../progress-bar';
 
 const MiniPlayer = () => {
   const [play, setPlay] = useState<Boolean>(false);
@@ -18,7 +19,7 @@ const MiniPlayer = () => {
             <span className={styles.songname}>Woman Like a man</span>
             <span className={styles.singer}>刘雨欣</span>
           </p>
-          <div className={styles.progressBar} />
+          <PargressBar />
         </div>
       </div>
       <div className={styles.ctrl}>
